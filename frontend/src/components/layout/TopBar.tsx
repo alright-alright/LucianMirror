@@ -7,9 +7,12 @@ import {
   Monitor,
   RefreshCw,
   Zap,
-  Cloud
+  Cloud,
+  Activity
 } from 'lucide-react';
 import clsx from 'clsx';
+import { APIConnectionIndicator } from '../status/APIConnectionIndicator';
+import { LucianMetrics } from '../metrics/LucianMetrics';
 
 interface TopBarProps {
   title?: string;
@@ -22,18 +25,12 @@ export const TopBar: React.FC<TopBarProps> = ({
 }) => {
   const [isDark, setIsDark] = React.useState(true);
   const [mode, setMode] = React.useState<'sprite' | 'story' | 'video'>('sprite');
-  const [apiStatus, setApiStatus] = React.useState<'connected' | 'disconnected'>('connected');
-
-  React.useEffect(() => {
-    // Check API connection
-    fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:8000'}/`)
-      .then(() => setApiStatus('connected'))
-      .catch(() => setApiStatus('disconnected'));
-  }, []);
+  const [showMetrics, setShowMetrics] = React.useState(false);
 
   return (
-    <header className="bg-gray-900 border-b border-gray-800 px-6 py-4">
-      <div className="flex items-center justify-between">
+    <>
+      <header className="bg-gray-900 border-b border-gray-800 px-6 py-4">
+        <div className="flex items-center justify-between">
         {/* Left side */}
         <div className="flex items-center space-x-6">
           <h2 className="text-2xl font-bold text-white">{title}</h2>
@@ -91,18 +88,20 @@ export const TopBar: React.FC<TopBarProps> = ({
             </div>
           )}
 
-          {/* API Status */}
-          <div className="flex items-center space-x-2">
-            <Cloud 
-              className={clsx(
-                'w-5 h-5',
-                apiStatus === 'connected' ? 'text-green-500' : 'text-red-500'
-              )}
-            />
-            <span className="text-sm text-gray-400">
-              {apiStatus === 'connected' ? 'API Connected' : 'API Offline'}
-            </span>
-          </div>
+          {/* API Connection Indicator - Your Signature Style */}
+          <APIConnectionIndicator />
+
+          {/* LucianOS Metrics Toggle */}
+          <button 
+            onClick={() => setShowMetrics(!showMetrics)}
+            className={clsx(
+              "p-2 rounded-lg transition-colors",
+              showMetrics ? "bg-purple-900/30 text-purple-400" : "hover:bg-gray-800 text-gray-400"
+            )}
+            title="Toggle LucianOS Metrics"
+          >
+            <Activity className="w-5 h-5" />
+          </button>
 
           {/* Sync Button */}
           <button className="p-2 hover:bg-gray-800 rounded-lg transition-colors">
@@ -134,12 +133,20 @@ export const TopBar: React.FC<TopBarProps> = ({
         </div>
       </div>
 
-      {/* Breadcrumbs */}
-      <div className="flex items-center space-x-2 mt-4 text-sm">
-        <span className="text-gray-400">Home</span>
-        <span className="text-gray-600">/</span>
-        <span className="text-white">{title}</span>
-      </div>
-    </header>
+        {/* Breadcrumbs */}
+        <div className="flex items-center space-x-2 mt-4 text-sm">
+          <span className="text-gray-400">Home</span>
+          <span className="text-gray-600">/</span>
+          <span className="text-white">{title}</span>
+        </div>
+      </header>
+
+      {/* LucianOS Metrics Panel - Slides Down */}
+      {showMetrics && (
+        <div className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 px-6 py-4">
+          <LucianMetrics />
+        </div>
+      )}
+    </>
   );
 };
