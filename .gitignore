@@ -1,0 +1,152 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+.venv
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+dist/
+dist-ssr/
+*.local
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Storage
+storage/
+uploads/
+sprites/
+backgrounds/
+exports/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# ML/AI Models
+models/
+weights/
+*.h5
+*.pkl
+*.pth
+*.onnx
+
+# Media files
+*.mp4
+*.avi
+*.mov
+*.gif
+*.jpg
+*.jpeg
+*.png
+*.bmp
+!docs/**/*.png
+!docs/**/*.jpg
+
+# Temporary
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*.backup
+.port-info.json
+
+# Redis
+dump.rdb
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Output
+output/
+generated/
+composed/
+
+# Frontend build
+frontend/dist/
+frontend/.vite/
+
+# Backend
+backend/lucianmirror.db
+backend/celerybeat-schedule
+
+# OS
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Custom
+scratch/
+playground/
+experiments/
