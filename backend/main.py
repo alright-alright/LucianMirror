@@ -23,6 +23,11 @@ from core.hasr import HASR
 from services.sprite_generation_service import sprite_generation_service
 from services.composition_service import composition_service, video_composition_service
 from services.storage_service import sprite_storage
+from services.video_generation_service import video_generation_service
+
+# Import API routers
+from api.mysunshine_integration import setup_mysunshine_routes
+from api.video_endpoints import setup_video_routes
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -475,6 +480,16 @@ async def internal_error_handler(request, exc):
         status_code=500,
         content={"status": "error", "message": "Internal server error"}
     )
+
+# ========================
+# Setup Additional Routes
+# ========================
+
+# Add MySunshineStories integration routes
+setup_mysunshine_routes(app)
+
+# Add video generation routes for episodic content
+setup_video_routes(app)
 
 # ========================
 # Run the application
