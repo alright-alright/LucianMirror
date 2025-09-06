@@ -1,5 +1,10 @@
 # LucianMirror
 
+<div align="center">
+  <h3>🚀 A Product of AerwareAI • Powered by LucianOS Components 🧠</h3>
+  <p><strong>The Future of Personalized Entertainment</strong></p>
+</div>
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -10,17 +15,37 @@
 ![Redis](https://img.shields.io/badge/redis-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
+## 🏢 About AerwareAI
+
+**AerwareAI** is pioneering the future of personalized AI entertainment. We build systems that put YOU at the center of every story, game, and experience.
+
+## 🧠 Powered by LucianOS
+
+This project leverages cognitive components from **LucianOS**, an advanced AI operating system that brings human-like learning and memory to software:
+
+- **MPU (Memory Processing Unit)** - Multi-dimensional memory indexing
+- **SSP (Symbolic Sense Processor)** - Natural language understanding
+- **HASR (Hebbian Adaptive Sprite Recommendation)** - Continuous learning from usage
+
 ## What It Is
 
-LucianMirror is an AI-powered sprite generation and composition engine that creates consistent character sprites across multiple poses, emotions, and contexts. Built with cognitive components from LucianOS, it learns and improves sprite selection over time while maintaining character consistency throughout stories, games, and interactive media.
+LucianMirror is an AI-powered sprite generation and composition engine that creates consistent character sprites across multiple poses, emotions, and contexts. Built as the foundation for the Netflix/Disney of personalized entertainment, it enables stories, videos, games, and experiences starring YOU and your chosen ones.
 
 ## What It Does
 
+### Core Capabilities
 - **Generates Consistent Character Sprites** - Creates complete sprite libraries from reference photos
 - **Processes Stories into Visual Scenes** - Automatically converts text to composed images
-- **Manages Multiple Sprite Packs** - Handles characters, family members, pets, and objects
-- **Learns from Usage** - Improves sprite selection using Hebbian reinforcement learning
-- **Supports Multiple AI Providers** - Plug-and-play architecture for DALL-E, Stable Diffusion, Replicate, and more
+- **Creates Animated Videos** - TikTok, YouTube Shorts, and episodic content
+- **Builds RPG Game Assets** - Complete hero packages with sprite sheets
+- **Powers Entertainment Platform** - Series, movies, and crossover events
+
+### Technical Features
+- **Tool-Agnostic Architecture** - Swap any AI provider instantly (DALL-E, Stable Diffusion, Midjourney)
+- **Profile & Template System** - Reusable standards for consistent generation
+- **Learning System** - Improves using LucianOS cognitive components
+- **Smart Port Detection** - Never conflicts with other dev projects
+- **API Connection Indicators** - Real-time status monitoring
 
 ## How It Works
 
@@ -271,8 +296,27 @@ sequenceDiagram
 
 MIT License - See [LICENSE](./LICENSE) for details
 
-## Author
+## 🏆 Credits & Acknowledgments
 
-**Aeryn White** - [GitHub](https://github.com/alright-alright)
+### Author
+**Aeryn White** - Founder & CEO, AerwareAI
+- GitHub: [@alright-alright](https://github.com/alright-alright)
+- Project: LucianMirror
 
-Built with LucianOS cognitive architecture for consistent, learning-enabled sprite generation.
+### Built With
+- **LucianOS Components** - Advanced cognitive architecture
+- **AerwareAI Standards** - Enterprise-grade development practices
+- **Open Source Community** - Standing on the shoulders of giants
+
+### Special Thanks
+- MySunshineStories - First integration partner
+- The AI/ML community for continuous innovation
+- All contributors and early adopters
+
+---
+
+<div align="center">
+  <p><strong>AerwareAI</strong> - Pioneering Personalized AI Entertainment</p>
+  <p>Built with LucianOS cognitive architecture for consistent, learning-enabled generation</p>
+  <p>© 2024 AerwareAI. All rights reserved.</p>
+</div>
